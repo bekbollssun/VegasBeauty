@@ -20,5 +20,10 @@ export const router = createBrowserRouter([
         path:"/login",
         element: <Login />
 
+    },
+    {
+        id:"Main",
+        path:"/main",
+        element: <MainPage/>
     }
 ])
