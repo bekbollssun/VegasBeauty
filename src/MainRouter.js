@@ -2,6 +2,9 @@ import { createBrowserRouter } from "react-router-dom";
 import MainPage from "./pages/MainPage";
 import Registration from "./pages/Auth/Registration";
 import Login from "./pages/Auth/Login";
+import Header from "./componets/Header";
+import ProductCard from "./componets/ProductCard";
+
 
 export const router = createBrowserRouter([
     {
@@ -20,5 +23,16 @@ export const router = createBrowserRouter([
         path:"/login",
         element: <Login />
 
+    },
+    {
+        id:"Header",
+        path:"/header",
+        element: <Header/>
+    },
+    {
+        id:"ProductCard",
+        path:"/card",
+        element:<ProductCard/>
     }
+   
 ])
