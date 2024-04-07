@@ -1,0 +1,37 @@
+
+body {
+    background-color: #F5EAD9               ; 
+}
+
+.header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 10px;
+    /* background-color: #F5EAD9; */
+    /* margin-left: 140px; */
+  }
+  
+  .logo {
+    margin: 0;
+    color:#7A2841;
+    font-size: 30px;
+  }
+  
+  .nav-item {
+    margin: 0 10px;
+    text-decoration: none; 
+    color: #7A2841;
+    font-size: 20px ;
+  }
+  
+  .header-end {
+    display: flex; 
+    align-items: center; 
+    margin-top: -10px;
+  }
+  
+  .header-end a {
+    margin-left: 20px;
+  }
+  
