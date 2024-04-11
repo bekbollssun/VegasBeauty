@@ -1,75 +1,161 @@
-import ProductCard from "../componets/ProductCard";
 import React from 'react';
-import { Button, Flex } from 'antd';
-import { Space, Typography } from 'antd';
+import '../componets/Header.css';
+import Header from '../componets/Header';
+import './MainPage.css';
+import image59 from '../images/image59.png';
+import image60 from '../images/image60.png';
+import image61 from '../images/image61.png';
+import image62 from '../images/image62.png';
+import image44 from '../images/image44.png';
+import Pipette from '../images/Pipette.png';
+import Pepette2 from '../images/Pipette2.png';
+import Pepette3 from '../images/Pipette3.png';
+import Pepette4 from '../images/Pipette4.png';
+import Pepette5 from '../images/Pipette5.png';
+import P from '../images/P.png';
+import { InstagramOutlined, WhatsAppOutlined, FacebookOutlined } from '@ant-design/icons';
 
-function MainPage () {
 
-const { Text, Link } = Typography;
-const Button = () => {
-    const buttonStyle = {
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      width: '50px',
-      height: '50px',
-      borderRadius: '10px',
-      border: 'none',
-      backgroundColor: 'transparent',
-      position: 'relative',
-    };
-  
-    const iconStyle = {
-      width: '30px',
-      height: '30px',
-      transition: '0.2s linear',
-    };
-  
-    const afterStyle = {
-      content: 'like',
-      width: 'fit-content',
-      height: 'fit-content',
-      position: 'absolute',
-      fontSize: '15px',
-      color: 'white',
-      fontFamily: "'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif",
-      opacity: '0',
-      visibility: 'hidden',
-      transition: '0.2s linear',
-      top: '115%',
-    };
-  
-    const hoverStyle = {
-      transform: 'scale(1.2)',
-    };
-  
-    const hoverIconStyle = {
-      fill: 'rgb(177, 139, 189)',
-      transition: '0.2s linear',
-    };
-  
-    const hoverAfterStyle = {
-      visibility: 'visible',
-      opacity: '1',
-      top: '105%',
-    };
-    return (
-        <Flex vertical gap="small" style={{ width: '5%' , left:'800px'}}>
-        <Button type="Бишкек" block>
-        <Space direction="vertical">
-        <Text>Бишкек  </Text>
-        </Space>
-      </Button>
-      <button className="btn">
-      <svg className="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <path d="M0 0h24v24H0z" fill="none" />
-        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-      </svg>
-    </button>
-      </Flex>
-    )
+
+const MainPage = () => {
+  const handleClick = () => {
+    console.log('Button clicked!');
+  };
+
+  return (
+    <div className='header-cont'>
+      <Header />
+      <h1 className='header-name'>Нежный уход за кожей <div> для вашей семьи </div></h1>
+      <div className='header-image'>
+        <img className='header-img2' src={image60} alt='Image60' />
+        <img className='header-img' src={image59} alt='Image59' />
+      </div>
+      <div className='header-und'>
+        <h4 className='header-text'>Мы — небольшая команда энтузиастов, которые верят в натуральные и экологически чистые <div>ингредиенты для сияющей и здоровой кожи. Мы посвящаем себя поиску лучших натуральных </div>продуктов по уходу за кожей.</h4>
+        <button className='header-button' onClick={() => {window.location.href='/katalog'}}>В Каталог</button>
+      </div>
+      <div className='midle-img'>
+        <div className='image-container'>
+          <img src={image61} alt='Image61' />
+          <span className='image-name'>Название изображения 1</span>
+        </div>
+        <div className='image-container'>
+          <img src={image62} alt='Image62' />
+          <span className='image-name'>Название изображения 2</span>
+        </div>
+        <div className='image-container'>
+          <img src={image44} alt='Image44' />
+          <span className='image-name'>Название изображения 3</span>
+        </div>
+      </div>
+
+      <div className='midle'>
+        <img className='Heder-Pipette' src={Pipette} alt='Pipette' />
+        <h5 className='midle-text'>Натуральный уход <div>за кожей</div>
+          <div className='midle-mini-text'> Наша миссия — помочь вам добиться <div> естественного и сияющего цвета лица за счет </div>использования высококачественных натуральных продуктов по уходу за кожей.</div>
+          <button className='midle-button' onClick={handleClick}><a href='/katalog'>В каталог</a></button>
+        </h5>
+      </div>
+
+
+      <div className='header-end'>
+        <h4 className='end-text'> Питайте и защищайте свою <div className='under-text'>кожу с помощью наших <div className='product'>продуктов</div></div>  </h4>
+      </div>
+
+      <div className='product-grid'>
+        <div className='product-card'>
+          <img src={Pepette2} alt='Product 1' />
+          <div className='product-info'>
+            <span className='product-name'>Название товара 1</span>
+            <span className='product-price'>$10.99</span>
+            <button className='add-to-cart-button' onClick={handleClick}>Добавить в корзину</button>
+          </div>
+        </div>
+        <div className='product-card'>
+          <img src={Pepette3} alt='Product 2' />
+          <div className='product-info'>
+            <span className='product-name'>Название товара 2</span>
+            <span className='product-price'>$15.99</span>
+            <button className='add-to-cart-button' onClick={handleClick}>Добавить в корзину</button>
+          </div>
+        </div>
+        <div className='product-card'>
+          <img src={Pepette4} alt='Product 3' />
+          <div className='product-info'>
+            <span className='product-name'>Название товара 3</span>
+            <span className='product-price'>$19.99</span>
+            <button className='add-to-cart-button' onClick={handleClick}>Добавить в корзину</button>
+          </div>
+        </div>
+        <div className='product-card'>
+          <img src={image44} alt='Product 4' />
+          <div className='product-info'>
+            <span className='product-name'>Название товара 3</span>
+            <span className='product-price'>$19.99</span>
+            <button className='add-to-cart-button' onClick={handleClick}>Добавить в корзину</button>
+          </div>
+        </div>
+        <div className='product-card'>
+          <img src={Pepette5} alt='Product 5' />
+          <div className='product-info'>
+            <span className='product-name'>Название товара 3</span>
+            <span className='product-price'>$19.99</span>
+            <button className='add-to-cart-button' onClick={handleClick}>Добавить в корзину</button>
+          </div>
+        </div>
+        <div className='product-card'>
+          <img src={P} alt='Product 6' />
+          <div className='product-info'>
+            <span className='product-name'>Название товара 3</span>
+            <span className='product-price'>$19.99</span>
+            <button className='add-to-cart-button' onClick={handleClick}>Добавить в корзину</button>
+          </div>
+        </div>
+
+        <div className='product-card'>
+          <img src={image44} alt='Product 4' />
+          <div className='product-info'>
+            <span className='product-name'>Название товара 3</span>
+            <span className='product-price'>$19.99</span>
+            <button className='add-to-cart-button' onClick={handleClick}>Добавить в корзину</button>
+          </div>
+        </div>
+
+        <div className='product-card'>
+          <img src={image44} alt='Product 4' />
+          <div className='product-info'>
+            <span className='product-name'>Название товара 3</span>
+            <span className='product-price'>$19.99</span>
+            <button className='add-to-cart-button' onClick={handleClick}>Добавить в корзину</button>
+          </div>
+        </div>
+
+        <div className='under-card-button'><button><a className='card-button' href='/card'>Больше карточек</a></button></div>
+
+      </div>
+      <hr className='hr' />
+      <div className="header">
+      <h4 className='logo2'>VEGAS BEAUTY</h4>
+      <div className='end'>
+        <a href='/about' className='nav-item'>о нас</a>
+        <a href='/katalog' className='nav-item'>Каталог</a>
+        <a href='/otzyvy' className='nav-item'>Отзывы</a>
+      </div>
+      
+        <a href='/login'> <button className='profile-button'>Войти</button></a>
+        <a href='/registration'><button className='profile-button'>Зарегистрироваться</button> </a>
+      </div>
+      <div className='social-icons'>
+  <InstagramOutlined style={{ fontSize: '24px', marginRight: '10px' }} />
+  <WhatsAppOutlined style={{ fontSize: '24px', marginRight: '10px' }} />
+  <FacebookOutlined style={{ fontSize: '24px', marginRight: '10px' }} />
+</div>
+
+    </div>
+      
+
+    
+  );
 }
-}
-
 
 export default MainPage;

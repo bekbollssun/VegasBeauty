@@ -16,6 +16,7 @@ body {
     margin: 0;
     color:#7A2841;
     font-size: 30px;
+    /* margin-left:  */
   }
   
   .nav-item {
@@ -23,6 +24,7 @@ body {
     text-decoration: none; 
     color: #7A2841;
     font-size: 20px ;
+    margin-left: 50px;
   }
   
   .header-end {

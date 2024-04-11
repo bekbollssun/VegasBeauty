@@ -3,7 +3,7 @@ import './Header.css';
 import SearchIcon from '../images/Search.png'; 
 import VectorIcon from '../images/Vector.png';
 import RectangleIcon from '../images/Rectangle.png'; 
-// import '../pages/MainPage'
+//import '../pages/MainPage'
 
 function Header() {
   return (
@@ -15,7 +15,7 @@ function Header() {
       <div className='header-end'>
       <a href='/search'><img src={SearchIcon} alt='Search' /></a>
       <a href='/like'><img src={VectorIcon} alt='Like' /></a> 
-      <a href='/card'><img src={RectangleIcon} alt='Card' /></a> 
+      <a href='/cart'><img src={RectangleIcon} alt='Card' /></a> 
     </div></div>
   );
 }

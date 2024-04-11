@@ -4,9 +4,21 @@ import Registration from "./pages/Auth/Registration";
 import Login from "./pages/Auth/Login";
 import Header from "./componets/Header";
 import ProductCard from "./componets/ProductCard";
+import Search from "./contact us/search";
+import CosmeticBasket from "./pages/Cart";
 
 
 export const router = createBrowserRouter([
+    {
+        id:"Page",
+        path:"/cart",
+        element:<CosmeticBasket/>
+    },
+    {
+        id:"search",
+        path:"/search",
+        element:<Search/>
+    },
     {
         id: "Base",
         path: "/",
@@ -24,12 +36,7 @@ export const router = createBrowserRouter([
         element: <Login />
 
     },
-    {
-// <<<<<<< HEAD
-        id:"Main",
-        path:"/main",
-        element: <MainPage/>
-    },
+    
     {
         id:"Header",
         path:"/header",
@@ -39,7 +46,5 @@ export const router = createBrowserRouter([
         id:"ProductCard",
         path:"/card",
         element:<ProductCard/>
-// >>>>>>> origin/new_branch
     }
-   
-])
+    ]);
